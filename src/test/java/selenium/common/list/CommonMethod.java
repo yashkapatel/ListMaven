@@ -25,7 +25,6 @@ public class CommonMethod {
 		return list;
 	}
 	
-	
 	public String getPropertyValue(String key) {
 		String value = null;
 		Properties prop = new Properties();
@@ -33,15 +32,12 @@ public class CommonMethod {
 
 		try {
 
-			input = new FileInputStream("config.properties");
-
+			input = new FileInputStream("./resources/testData.properties");
 			// load a properties file
 			prop.load(input);
 
 			// get the property value and print it out
-			System.out.println(prop.getProperty("database"));
-			System.out.println(prop.getProperty("dbuser"));
-			System.out.println(prop.getProperty("dbpassword"));
+			value = prop.getProperty(key);
 
 		} catch (IOException ex) {
 			ex.printStackTrace();

@@ -31,4 +31,8 @@ public class Story1Page {
 		List<WebElement> hoveredList = utils.getHoveredList(driver,"//*[@id=\"container\"]/div/div[2]/div/ul/li[1]/span","//*[@id=\"container\"]/div/div[2]/div/ul/li[1]/ul/li/ul/li[1]/ul/li/a");
 		return hoveredList;
 	}
+	public void printProperties() {
+		System.out.println(utils.getPropertyValue("dbusername")); 
+		System.out.println(utils.getPropertyValue("dbpassword"));
+	}
 }

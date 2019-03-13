@@ -27,10 +27,11 @@ public class Story1Test {
 	public void ActionTestFlipkart() {
 		/** Flipkart test **/
 		Story1Page obj = new Story1Page();
+
 		obj.openPage("https://www.flipkart.com/");
 
 		List<WebElement> hoveredList = obj.getHoveredFlipkartList();
-		
+
 		System.out.println(hoveredList.size());
 		for (int i = 0; i < hoveredList.size(); i++) {
 			System.out.println(hoveredList.get(i).getAttribute("title"));
@@ -38,6 +39,7 @@ public class Story1Test {
 		System.out.println("success");
 		obj.closePage();
 
+		obj.printProperties();
 	}
 
 }
