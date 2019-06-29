@@ -9,7 +9,8 @@ public class SetupDriver {
 	WebDriver driver;
 	
 	public WebDriver getChromeDriver() {
-		System.setProperty("webdriver.chrome.driver", "D:\\Mohwk_college\\Selenium\\selenium-driver\\chromedriver.exe");
+		//System.setProperty("webdriver.chrome.driver", "D:\\Mohwk_college\\Selenium\\selenium-driver\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "chromedriver");
 	    driver = new ChromeDriver();
 	    driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 	    driver.manage().window().maximize();
