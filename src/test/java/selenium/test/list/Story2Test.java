@@ -7,11 +7,11 @@ import selenium.page.list.Story2Page;
 public class Story2Test {
 	
 	@Test
-	public void ActionTestAmazon() {
+	public void ActionTest() {
 
 		Story2Page obj = new Story2Page();
-		obj.openPage("http://toolsqa.com/handling-alerts-using-selenium-webdriver/");
-		String alertText = obj.getAlertText("//*[@id='content']/p[8]/button");
+		obj.openPage("https://www.jquery-az.com/javascript/demo.php?ex=151.0_1");
+		String alertText = obj.getAlertText(".indtd button");
 		System.out.println(alertText);
 		System.out.println("success");
 		obj.closePage();

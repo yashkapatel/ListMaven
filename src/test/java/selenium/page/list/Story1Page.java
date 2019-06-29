@@ -2,6 +2,7 @@ package selenium.page.list;
 
 import java.util.List;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
@@ -12,6 +13,10 @@ public class Story1Page {
 	
 	CommonMethod utils = new CommonMethod();
 	SetupDriver obj = new SetupDriver();
+	
+	By userName = By.xpath("");
+	By password = By.id("password");
+	
 	
 	WebDriver driver;
 	
@@ -29,6 +34,7 @@ public class Story1Page {
 	}
 	public List<WebElement> getHoveredFlipkartList() {
 		List<WebElement> hoveredList = utils.getHoveredList(driver,"//*[@id=\"container\"]/div/div[2]/div/ul/li[1]/span","//*[@id=\"container\"]/div/div[2]/div/ul/li[1]/ul/li/ul/li[1]/ul/li/a");
+		//driver.findElement(userName).sendKeys("rutu");
 		return hoveredList;
 	}
 	public void printProperties() {

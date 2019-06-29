@@ -20,8 +20,8 @@ public class Story2Page {
 	public void closePage() {
 		driver.close();
 	}
-	public String getAlertText(String xPath1) {
-		driver.findElement(By.xpath(xPath1)).click();
+	public String getAlertText(String cssPath) {
+		driver.findElement(By.cssSelector(cssPath)).click();
 		
 		Alert alert = driver.switchTo().alert();
 		String ret = alert.getText();
